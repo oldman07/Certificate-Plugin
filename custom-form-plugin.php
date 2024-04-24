@@ -316,3 +316,7 @@ function display_custom_search_results() {
 add_shortcode('custom_search_results', 'display_custom_search_results');
 
 
+function enqueue_plugin_styles() {
+    wp_enqueue_style('plugin-styles', plugin_dir_url(__FILE__) . 'plugin-styles.css');
+}
+add_action('admin_enqueue_scripts', 'enqueue_plugin_styles');
